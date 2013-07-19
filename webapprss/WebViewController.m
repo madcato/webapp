@@ -27,9 +27,7 @@
     _url = u;
 	NSURLRequest* request = [NSURLRequest requestWithURL:
                              [NSURL URLWithString:_url]];
-    web.delegate = self;
-    web.suppressesIncrementalRendering = YES;
-	[web loadRequest:request];
+    [web loadRequest:request];
 }
 
 - (void)viewDidLoad {
@@ -39,6 +37,9 @@
                                              action:@selector(moreTouched)];
 	[self.navigationItem setRightBarButtonItem:moreButton];
     [super viewDidLoad];
+    web.delegate = self;
+    web.suppressesIncrementalRendering = YES;
+
 }
 
 -(void)moreTouched {

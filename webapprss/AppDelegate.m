@@ -34,7 +34,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [networkReachability stopNotifier];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -51,6 +50,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [networkReachability stopNotifier];
 }
 
 #pragma mark - Network reachability delegate 
@@ -64,9 +64,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 }
 
 - (void)networkAvailable {
-    UIViewController* controller = [self.window.rootViewController.storyboard
-                                    instantiateInitialViewController];
-    self.window.rootViewController = controller;
+    if ([self.window.rootViewController
+         isKindOfClass:[UITabBarController class]] == NO) {
+        UIViewController* controller = [self.window.rootViewController.storyboard
+                                        instantiateInitialViewController];
+        self.window.rootViewController = controller;
+    }
 }
 
 - (void)networkUnavailable {

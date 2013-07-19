@@ -29,7 +29,7 @@ const CGFloat waitingViewWidth = 122.0;
     
     loadingView.opaque = NO;
     loadingView.layer.opacity = 1;
-    loadingView.backgroundColor = [UIColor whiteColor];
+    loadingView.backgroundColor = [UIColor clearColor];
     loadingView.layer.cornerRadius = 15;
     
     UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
