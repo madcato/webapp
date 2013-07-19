@@ -8,20 +8,19 @@
 
 #import "FirstViewController.h"
 
-@interface FirstViewController ()
-
+@interface FirstViewController () {
+    
+}
 @end
 
 @implementation FirstViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.webController.url = @"http://www.apple.com";
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

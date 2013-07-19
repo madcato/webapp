@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebTabViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : WebTabViewController
 
 @end
