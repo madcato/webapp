@@ -25,6 +25,7 @@
 		0B8726C5179956C1008EA159 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B8726A4179956C1008EA159 /* UIKit.framework */; };
 		0B8726CD179956C1008EA159 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B8726CB179956C1008EA159 /* InfoPlist.strings */; };
 		0B8726CF179956C1008EA159 /* webapprssTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8726CE179956C1008EA159 /* webapprssTests.m */; };
+		0BCC186E17998AE100A5393D /* OSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC186D17998AE100A5393D /* OSLoadingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		0B8726CA179956C1008EA159 /* webapprssTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "webapprssTests-Info.plist"; sourceTree = "<group>"; };
 		0B8726CC179956C1008EA159 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B8726CE179956C1008EA159 /* webapprssTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webapprssTests.m; sourceTree = "<group>"; };
+		0BCC186C17998AE100A5393D /* OSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSLoadingViewController.h; sourceTree = "<group>"; };
+		0BCC186D17998AE100A5393D /* OSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSLoadingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,10 @@
 				0B2385A61799582D007DD866 /* WebViewController.h */,
 				0B2385A71799582D007DD866 /* WebViewController.m */,
 				0B2385A81799582D007DD866 /* WebViewController.xib */,
+				0BCC186C17998AE100A5393D /* OSLoadingViewController.h */,
+				0BCC186D17998AE100A5393D /* OSLoadingViewController.m */,
+				0B2385AB179960A6007DD866 /* WebTabViewController.h */,
+				0B2385AC179960A6007DD866 /* WebTabViewController.m */,
 			);
 			name = web;
 			sourceTree = "<group>";
@@ -143,8 +150,6 @@
 				0B8726B9179956C1008EA159 /* SecondViewController.m */,
 				0B8726BB179956C1008EA159 /* Images.xcassets */,
 				0B8726A7179956C1008EA159 /* Supporting Files */,
-				0B2385AB179960A6007DD866 /* WebTabViewController.h */,
-				0B2385AC179960A6007DD866 /* WebTabViewController.m */,
 			);
 			path = webapprss;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			files = (
 				0B8726BA179956C1008EA159 /* SecondViewController.m in Sources */,
 				0B2385AD179960A6007DD866 /* WebTabViewController.m in Sources */,
+				0BCC186E17998AE100A5393D /* OSLoadingViewController.m in Sources */,
 				0B2385A91799582D007DD866 /* WebViewController.m in Sources */,
 				0B8726B1179956C1008EA159 /* AppDelegate.m in Sources */,
 				0B8726B7179956C1008EA159 /* FirstViewController.m in Sources */,

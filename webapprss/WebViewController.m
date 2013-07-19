@@ -7,7 +7,15 @@
 //
 
 #import "WebViewController.h"
+#import "OSLoadingViewController.h"
 
+@interface WebViewController () {
+    BOOL firstLoad;
+}
+
+@property (nonatomic, strong) OSLoadingViewController* loadingController;
+
+@end
 
 @implementation WebViewController
 
@@ -15,6 +23,7 @@
 @synthesize url = _url;
 
 - (void)setUrl:(NSString *)u {
+    firstLoad = YES;
     _url = u;
 	NSURLRequest* request = [NSURLRequest requestWithURL:
                              [NSURL URLWithString:_url]];
@@ -29,6 +38,7 @@
 	[self.navigationItem setRightBarButtonItem:moreButton];
     [super viewDidLoad];
 	web.delegate = self;
+    web.suppressesIncrementalRendering = YES;
 }
 
 -(void)moreTouched {
@@ -96,10 +106,35 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    if (firstLoad) {
+        [self hideLoadingView];
+        firstLoad = NO;
+    }
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    if (firstLoad) {
+        [self showLoadingView];
+    }
 }
 
+#pragma mark - loading view methods
+
+- (void)showLoadingView {
+    [self.loadingController showLoadingView];
+}
+
+- (void)hideLoadingView {
+    [self.loadingController hideLoadingView];
+}
+
+- (OSLoadingViewController*)loadingController {
+    if (_loadingController == nil) {
+        _loadingController = [[OSLoadingViewController alloc] init];
+        _loadingController.parentView = self.view;
+    }
+    
+    return _loadingController;
+}
 @end
