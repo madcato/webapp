@@ -14,15 +14,19 @@
 
 @implementation WebTabViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	self.webController = [[WebViewController alloc]
-                     initWithNibName:@"WebViewController"
-                     bundle:nil];
+- (void)createWebController {
+    self.webController = [[WebViewController alloc]
+                          initWithNibName:@"WebViewController"
+                          bundle:nil];
     [self addChildViewController:self.webController];
     self.webController.view.frame = self.view.frame;
     [self.view addSubview:self.webController.view];
+}
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+	[self createWebController];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

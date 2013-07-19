@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OSNetwork.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, OSNetworkDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -26,6 +26,8 @@
 		0B8726CD179956C1008EA159 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B8726CB179956C1008EA159 /* InfoPlist.strings */; };
 		0B8726CF179956C1008EA159 /* webapprssTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8726CE179956C1008EA159 /* webapprssTests.m */; };
 		0BCC186E17998AE100A5393D /* OSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC186D17998AE100A5393D /* OSLoadingViewController.m */; };
+		0BCC18711799D94C00A5393D /* OSNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC18701799D94C00A5393D /* OSNetwork.m */; };
+		0BCC18731799DACA00A5393D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC18721799DACA00A5393D /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		0B8726CE179956C1008EA159 /* webapprssTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webapprssTests.m; sourceTree = "<group>"; };
 		0BCC186C17998AE100A5393D /* OSLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSLoadingViewController.h; sourceTree = "<group>"; };
 		0BCC186D17998AE100A5393D /* OSLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSLoadingViewController.m; sourceTree = "<group>"; };
+		0BCC186F1799D94C00A5393D /* OSNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSNetwork.h; sourceTree = "<group>"; };
+		0BCC18701799D94C00A5393D /* OSNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSNetwork.m; sourceTree = "<group>"; };
+		0BCC18721799DACA00A5393D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCC18731799DACA00A5393D /* SystemConfiguration.framework in Frameworks */,
 				0B8726A3179956C1008EA159 /* CoreGraphics.framework in Frameworks */,
 				0B8726A5179956C1008EA159 /* UIKit.framework in Frameworks */,
 				0B8726A1179956C1008EA159 /* Foundation.framework in Frameworks */,
@@ -103,6 +109,8 @@
 				0BCC186D17998AE100A5393D /* OSLoadingViewController.m */,
 				0B2385AB179960A6007DD866 /* WebTabViewController.h */,
 				0B2385AC179960A6007DD866 /* WebTabViewController.m */,
+				0BCC186F1799D94C00A5393D /* OSNetwork.h */,
+				0BCC18701799D94C00A5393D /* OSNetwork.m */,
 			);
 			name = web;
 			sourceTree = "<group>";
@@ -129,6 +137,7 @@
 		0B87269F179956C1008EA159 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BCC18721799DACA00A5393D /* SystemConfiguration.framework */,
 				0B8726A0179956C1008EA159 /* Foundation.framework */,
 				0B8726A2179956C1008EA159 /* CoreGraphics.framework */,
 				0B8726A4179956C1008EA159 /* UIKit.framework */,
@@ -283,6 +292,7 @@
 			files = (
 				0B8726BA179956C1008EA159 /* SecondViewController.m in Sources */,
 				0B2385AD179960A6007DD866 /* WebTabViewController.m in Sources */,
+				0BCC18711799D94C00A5393D /* OSNetwork.m in Sources */,
 				0BCC186E17998AE100A5393D /* OSLoadingViewController.m in Sources */,
 				0B2385A91799582D007DD866 /* WebViewController.m in Sources */,
 				0B8726B1179956C1008EA159 /* AppDelegate.m in Sources */,

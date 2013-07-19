@@ -21,6 +21,65 @@
             </objects>
             <point key="canvasLocation" x="653" y="-149"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="GIQ-ta-5ip">
+            <objects>
+                <viewController storyboardIdentifier="NoNetworkController" id="La0-w5-m5n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xIL-8C-yi7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No se ha podido conectar con el servidor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="8LK-hh-gqI">
+                                <rect key="frame" x="20" y="318" width="280" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="6oe-w4-27k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lo sentimos. En este momento el servidor no está disponible. Por favor, vuelva a intentarlo mas tarde." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-u3-7DQ">
+                                <rect key="frame" x="20" y="389" width="280" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="yxJ-6W-I4H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaM-We-5QJ">
+                                <rect key="frame" x="68" y="62" width="184" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="Gsr-aW-O5K"/>
+                                    <constraint firstAttribute="height" constant="175" id="WrI-mo-vxm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="266"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8LK-hh-gqI" firstAttribute="leading" secondItem="xIL-8C-yi7" secondAttribute="leading" constant="20" symbolic="YES" type="user" id="3np-pa-bzA"/>
+                            <constraint firstAttribute="centerX" secondItem="EaM-We-5QJ" secondAttribute="centerX" type="user" id="6w9-0i-H2C"/>
+                            <constraint firstItem="EaM-We-5QJ" firstAttribute="top" secondItem="xIL-8C-yi7" secondAttribute="top" constant="62" id="7DE-uZ-UuG"/>
+                            <constraint firstItem="7Ii-u3-7DQ" firstAttribute="top" secondItem="8LK-hh-gqI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Aqe-mw-LVc"/>
+                            <constraint firstItem="7Ii-u3-7DQ" firstAttribute="trailing" secondItem="8LK-hh-gqI" secondAttribute="trailing" type="default" id="D7c-zK-tTA"/>
+                            <constraint firstAttribute="bottom" secondItem="7Ii-u3-7DQ" secondAttribute="bottom" constant="82" id="Jvk-s1-T2t"/>
+                            <constraint firstItem="EaM-We-5QJ" firstAttribute="centerX" secondItem="8LK-hh-gqI" secondAttribute="centerX" type="user" id="LM6-Uu-Ifc"/>
+                            <constraint firstItem="8LK-hh-gqI" firstAttribute="leading" secondItem="7Ii-u3-7DQ" secondAttribute="leading" type="default" id="NNA-P9-GQc"/>
+                            <constraint firstAttribute="trailing" secondItem="8LK-hh-gqI" secondAttribute="trailing" constant="20" symbolic="YES" type="user" id="hJP-eI-FPh"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjX-ws-arc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="156"/>
+        </scene>
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
