@@ -27,6 +27,8 @@
     _url = u;
 	NSURLRequest* request = [NSURLRequest requestWithURL:
                              [NSURL URLWithString:_url]];
+    web.delegate = self;
+    web.suppressesIncrementalRendering = YES;
 	[web loadRequest:request];
 }
 
@@ -37,8 +39,6 @@
                                              action:@selector(moreTouched)];
 	[self.navigationItem setRightBarButtonItem:moreButton];
     [super viewDidLoad];
-	web.delegate = self;
-    web.suppressesIncrementalRendering = YES;
 }
 
 -(void)moreTouched {
@@ -110,6 +110,17 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         [self hideLoadingView];
         firstLoad = NO;
     }
+    
+//    NSURLCache* cache = [NSURLCache sharedURLCache];
+//    NSUInteger memoryCapacity = [cache memoryCapacity];
+//    NSUInteger memoryUsage = [cache currentMemoryUsage];
+//    NSUInteger diskCapacity = [cache diskCapacity];
+//    NSUInteger diskUsage = [cache currentDiskUsage];
+//    NSLog(@"Cache: Memoria(%u/%u) Disco(%u/%u)"
+//          ,memoryUsage
+//          ,memoryCapacity
+//          ,diskUsage
+//          ,diskCapacity);
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
