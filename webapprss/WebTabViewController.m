@@ -8,7 +8,11 @@
 
 #import "WebTabViewController.h"
 
-@interface WebTabViewController ()
+const NSInteger kFiveMinutes = 300;
+
+@interface WebTabViewController () {
+    NSDate* lastLoadDate;
+}
 
 @end
 
@@ -25,13 +29,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 	[self createWebController];
+    lastLoadDate = [NSDate date];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.webController.view.frame = self.view.frame;
+    if ([lastLoadDate timeIntervalSinceNow] < -kFiveMinutes) {
+        [self.webController.web reload];
+        lastLoadDate = [NSDate date];
+    }
 }
 
 - (void)didReceiveMemoryWarning

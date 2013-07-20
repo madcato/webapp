@@ -111,17 +111,6 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
         [self hideLoadingView];
         firstLoad = NO;
     }
-    
-//    NSURLCache* cache = [NSURLCache sharedURLCache];
-//    NSUInteger memoryCapacity = [cache memoryCapacity];
-//    NSUInteger memoryUsage = [cache currentMemoryUsage];
-//    NSUInteger diskCapacity = [cache diskCapacity];
-//    NSUInteger diskUsage = [cache currentDiskUsage];
-//    NSLog(@"Cache: Memoria(%u/%u) Disco(%u/%u)"
-//          ,memoryUsage
-//          ,memoryCapacity
-//          ,diskUsage
-//          ,diskCapacity);
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
