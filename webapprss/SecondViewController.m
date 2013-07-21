@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webController.url = @"http://www.macrumors.com";
+    self.webController.url = @"http://webapprss.herokuapp.com/restaurantList/index.html";
 }
 
 - (void)didReceiveMemoryWarning {
