@@ -105,16 +105,16 @@
 	<integer>40</integer>
 	<key>FeedModels</key>
 	<dict>
-		<key>206F3DF6-A221-4948-9FF8-9A7D9C8833CF</key>
+		<key>4328A99F-AD62-48FB-9767-544154073C7B</key>
 		<dict>
 			<key>sample</key>
 			<dict>
 				<key>date</key>
-				<date>2013-07-20T23:49:06Z</date>
+				<date>2013-07-21T02:36:15Z</date>
 				<key>encoding</key>
 				<integer>10</integer>
 				<key>fileName</key>
-				<string>206F3DF6-A221-4948-9FF8-9A7D9C8833CF</string>
+				<string>4328A99F-AD62-48FB-9767-544154073C7B</string>
 			</dict>
 		</dict>
 	</dict>

@@ -5,6 +5,7 @@
  code generator otherwise the changes will be lost.
  */
 var dashcodeDataSources = {
-    "dataSource": { "Class": "DC.AjaxController", "propertyValues": { "dataModel": { "cacheSample": true, "uuid": "206F3DF6-A221-4948-9FF8-9A7D9C8833CF", "url": null, "dataType": "json", "version": 1, "root": "", "model": [{ "address": "", "created_at": "", "description": "", "id": 1, "imageUrl": "", "latitude": 1, "longitude": 1, "name": "", "updated_at": "" }] }, "url": "http://webapprss.herokuapp.com/restaurants.json", "parameters": {} } }
+    "dataSource": { "Class": "DC.AjaxController", "propertyValues": { "dataModel": { "cacheSample": true, "uuid": "4328A99F-AD62-48FB-9767-544154073C7B", "url": null, "dataType": "json", "version": 1, "root": "", "model": [{ "address": "", "created_at": "", "description": "", "id": 1, "imageUrl": "", "name": "", "updated_at": "", "latitude": 1, "longitude": 1 }] }, "url": "http://webapprss.herokuapp.com/restaurants.json", "parameters": {} } }
 };
+
 
