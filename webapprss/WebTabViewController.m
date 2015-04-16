@@ -23,7 +23,6 @@ const NSInteger kFiveMinutes = 300;
                           initWithNibName:@"WebViewController"
                           bundle:nil];
     [self addChildViewController:self.webController];
-    self.webController.view.frame = self.view.frame;
     [self.view addSubview:self.webController.view];
 }
 
