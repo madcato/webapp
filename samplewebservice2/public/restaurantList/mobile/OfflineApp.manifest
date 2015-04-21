@@ -1,0 +1,24 @@
+CACHE MANIFEST
+
+NETWORK:
+http://webapprss.herokuapp.com/restaurants.json
+
+CACHE:
+../Images/backgroundStripes.png
+../Images/chevron.png
+../Images/chevron_white.png
+../Images/selectedRowiPhone.png
+../index.html
+main.css
+main.js
+Parts/Images/back_button.png
+Parts/Images/back_button__mid.png
+Parts/Images/back_button_clicked.png
+Parts/Images/back_button_clicked__mid.png
+Parts/Images/header.png
+Parts/Images/header__mid.png
+Parts/parts.js
+../Parts/core/external/sizzle_c.js
+../Parts/license.txt
+../Parts/Transitions.css
+../sampleData.js
