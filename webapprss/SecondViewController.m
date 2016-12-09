@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webController.url = @"http://webapprss.herokuapp.com/restaurantList/index.html";
+    [self.webController setLocalPath:@"_site"];
 }
 
 - (void)didReceiveMemoryWarning {

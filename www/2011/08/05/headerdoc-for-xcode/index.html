@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Veladan programming blog for all the programming issues I found.">
+
+    <title>HeaderDoc for Xcode - Veladan Programming Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/2011/08/05/headerdoc-for-xcode/">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/application.css" media="all" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Veladan Programming Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="/myapps/">My Apps</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-04.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>HeaderDoc for Xcode</h1>
+                    
+                    <span class="meta">Posted by Daniel Vela on August 5, 2011</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p>For more information, follow this link: <a href="http://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/HeaderDoc/intro/intro.html">HeaderDoc</a></p>
+
+<h2 id="scripts">scripts</h2>
+
+<p>Run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>headerdoc2html MyHeader.h</code></pre></figure>
+
+<p>This create a directory named MyHeader_H with an html documentation.</p>
+
+<p>Run:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>gatherheaderdoc MyHeader_H</code></pre></figure>
+
+<p>For scanning the input directory for doc html and it creates and index for that doc.</p>
+
+<h2 id="function-doc-sample">Function doc sample</h2>
+
+<figure class="highlight"><pre><code class="language-objective-c" data-lang="objective-c">/*!  
+    @function FunctionName  
+    @param k param doc.  
+    @return a string.  
+    This is a comment about FunctionName  
+*/  
+char* FunctionName(int k);  </code></pre></figure>
+
+<h2 id="class-doc-sample">Class doc sample</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">/<span class="k">*</span>!  
+    @class IOCommandGate  
+    @abstract This is a introductory explanation about the class.  
+    @discussion This is a more detailed description of the class.  
+    @throws foo_exception  
+    @throws bar_exception  
+    @namespace I/OKit  
+    @updated 2003-03-15  
+<span class="k">*</span>/  
+class IOCommandGate : public IOEcentSource  
+<span class="o">{</span>  
+...  
+<span class="o">}</span>  </code></pre></figure>
+
+<h2 id="more-doc-tags">More doc tags</h2>
+
+<p>@availabilitymacro, @class, @category, @protocol, @const, @define, @function, @enum, @title, @framework, @functiongroup, @header, @method, @property, @struct, @typedef, @union, @var</p>
+
+<h2 id="other-class-doc-subtags">Other @class doc subtags</h2>
+
+<p>@classdesign, @coclass, @depency, @helper, @helps, @instancesize, @ownership, @performance, @security, @superclass</p>
+
+<h2 id="other-function-and-method-doc-subtags">Other @function and @method doc subtags</h2>
+
+<p>@param, @result, @templatefield, @throws</p>
+
+<p>20110324.50</p>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2011/08/04/grand-central-dispatch-samples/" data-toggle="tooltip" data-placement="top" title="Grand Central Dispatch samples">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2011/08/07/ios-multiple-version-programming/" data-toggle="tooltip" data-placement="top" title="iOS Multiple Version Programming">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/madcato">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Veladan Programming Blog 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+</html>

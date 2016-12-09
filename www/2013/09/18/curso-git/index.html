@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Veladan programming blog for all the programming issues I found.">
+
+    <title>Curso git - Veladan Programming Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/2013/09/18/curso-git/">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/application.css" media="all" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Veladan Programming Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="/myapps/">My Apps</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-06.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Curso git</h1>
+                    
+                    <span class="meta">Posted by Daniel Vela on September 18, 2013</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="introduccin">1. Introducción</h2>
+
+<p>Con <strong>git</strong> el respositorio de trabajo se encuentra en el directorio raiz del proyecto. En concreto se encuantra en el directorio oculto de nombre <em>.git</em> .</p>
+
+<p>En este directorio se almacen todos los <em>commits</em>, versiones y ramas de todos archivos del proyecto.</p>
+
+<p>La principal caracterítica de <strong>git</strong> es la posibilidad de trabajar con diferentes respositorios remotos. Con <strong>git</strong> es muy sencillo compartir código entre diferentes programadores o enviar el código definitivo a un repositorio de producción o preproducción sin perder el control de versiones en nigún momento.</p>
+
+<h3 id="instalacin-de-git-en-un-mac">Instalación de git en un Mac</h3>
+
+<p>Git viene incluido con las utilidades en linea de comandos de Xcode. También se pueden descargar directamente de <a href="http://code.google.com/p/git-osx-installer/">git-osx-installer for Mac OS X</a></p>
+
+<h4 id="configurar">Configurar</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$git config --global user.name "Your name here"   
+$git config --global user.email "yourmail@here.com"   
+# optional, but recommended
+$git config --global merge.tool vimdiff    
+$git config --global core.editor vim   
+$git config --global color.ui true   
+</code></pre>
+</div>
+
+<h2 id="comandos-bsicos-de-control">2. Comandos básicos de control</h2>
+
+<p>Para inicializar la gestión de versiones de <strong>git</strong> usar el comando <em>init</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd project
+$ git init
+</code></pre>
+</div>
+
+<p>Esto creará en subdirectorio <em>.git</em> . En este directorio se almacenarán los diferentes <em>commits</em>. Pero inicialmente se encuantra vacío: el comando <em>init</em> no añade los ficheros del proyecto al repositorio. Para ello hay que usar el comando <em>add</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add .
+</code></pre>
+</div>
+
+<p>El comando <em>add</em> es recursivo. Al indicar un directorio como parámetro, se añadirá ese directorio y todos sus ficheros y subdirectorios recursivamente.</p>
+
+<p>También se puede usar este comando para añadir al repositorio un único fichero.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git add README
+</code></pre>
+</div>
+
+<p>Sin embargo el comando <em>add</em> no añade el fichero al repositorio directamente. Lo que hace es añadirlo a una zona virtual del respositorio llamada <strong>stage</strong>. Para añadir al respositorio los cambios o los ficheros, primero se debe añadir al <strong>stage</strong> aquellos ficheros que han sido modificados o creados. Una vez hecho esto, se puede añadir los cambios al respositorio con en comando <em>commit</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git commit -m 'first commit'
+</code></pre>
+</div>
+
+<p>El comando <em>commit</em> requiere un mensaje. Si no se indica un texto, aparecerá el editor de texto configurado para añadir un texto.</p>
+
+<p>Para conocer el estado de los fichero usar el comando:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git status
+</code></pre>
+</div>
+
+<p>Es recomendable haber configurado git con el flag <strong><em>color.ui</em></strong> puesto a <strong><em>true</em></strong></p>
+
+<h2 id="ramas">3. Ramas</h2>
+
+<p>Para crear una rama usar:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git branch new_branch
+</code></pre>
+</div>
+
+<p>Esto creará una nueva rama de desarrollo como copia del último <em>commit</em>. Para crear una nueva rama es remomendable haber guardado o deshecho todos los cambios en el directorio actual. En caso contrario, git avisará de que no puede crear una nueva rama en un directorio con cambios.</p>
+
+<p>Para cambiar de ramas se usa el comando <em>checkout</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git checkout new_branch
+</code></pre>
+</div>
+
+<p>Para mezclar ramas:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git merge branch1
+</code></pre>
+</div>
+
+<p>Esto mezclará la rama actual con la rama que se indique como parámetro. Además creará un nuevo <em>commit</em> en la rama activa.</p>
+
+<p>En caso de existir conflictos, se deberá resolver dichos conflictos antes de poder crear en nuevo <em>commit</em>.</p>
+
+<h3 id="fastforward">Fastforward</h3>
+
+<p>Hay casos en los que, a la hora de realizar una mezcla, se produce lo que se denomina un <strong>fastforward</strong>.</p>
+
+<p>Cuando se realiza un cambio de rama, la rama original es posible que se mantenga inalterada desde ese momentos. Si es así, al realizar el merge con la rama, git se da cuenta que no tiene que realizar mezcla alguna, si no simplemente cambiar el puntero HEAD del último <em>commit</em> de la rama original al puntero HEAD de la nueva rama. A esto se le denomina <strong>fastforward</strong>.</p>
+
+<p>El problema de estos <strong>fastforward</strong> es que la rama nueva desaparece sin dejar rastro. Si queremos mantener dicha rama o crear un nuevo commit en la rama original, se puede usar el parámetro <em>–no-ff</em> .</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git merge --no-ff branch1 
+</code></pre>
+</div>
+
+<p>Esto evitará el <strong>fastforward</strong>.</p>
+
+<h2 id="deshaciendo-cambios">4. Deshaciendo cambios</h2>
+
+<p>Hay varias maneras de deshacer los cambios</p>
+
+<h3 id="evitar-que-un-cambio-se-aada-a-un-commit">Evitar que un cambio se añada a un <em>commit</em></h3>
+
+<p>Si hemos añadido un fichero al <em>stage</em> por error, podemos quitarlo con el comando <strong>reset</strong>. De esta manera evitaremos que sea añada al <em>commit</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git reset HEAD file
+</code></pre>
+</div>
+
+<h3 id="cambiando-el-ltimo-commit">Cambiando el último <em>commit</em></h3>
+
+<p>Si en el último <em>commit</em> olvidaste añadir un fichero, se puede usar el parámetro <strong>–ammend</strong> para añadir un cambio al último <em>commit</em> realizado.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git commit -m 'first commit'
+$ git add file
+$ git commit --ammend
+</code></pre>
+</div>
+
+<h3 id="eliminando-los-cambios-de-un-fichero-local">Eliminando los cambios de un fichero local</h3>
+
+<p>Si hemos modificado por error un fichero o qqueremos volver a una versión previa, podemos usar el comando <strong>checkout</strong>. Este comando extrae del repositorio la versión que le indiquemos y sobreescribe el fichero que se encuentra en el directorio de trabajo. Por defecto este comando extrae la última versión de la rama actual.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git checkout -- file
+</code></pre>
+</div>
+
+<h4 id="eliminando-el-ltimo-commit">Eliminando el último <em>commit</em></h4>
+
+<p>Si hemos realizado un <em>commit</em> erroneamente, podemos desahcerlo con el comando <strong>reset</strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git reset --hard HEAD^
+</code></pre>
+</div>
+
+<p>Para eliminar varios <em>commits</em> se usar el parámetro <em>HEAD~3</em></p>
+
+<h2 id="resolviendo-conflictos">5. Resolviendo conflictos</h2>
+
+<p>Un conflicto se puede resolver de dos maneras:</p>
+
+<h3 id="editar-el-fichero-con-conflicto">Editar el fichero con conflicto</h3>
+
+<p>Git marca los conflictos en los ficheros de texto usando los siguientes marcadores:</p>
+
+<ol>
+  <li>«««&lt; HEAD</li>
+  <li>=======</li>
+  <li>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</li>
+</ol>
+
+<p>El texto que se encuentra entre los marcadores 1 y 2, es el texto de la rama activa. El texto que se encuentra entre los marcadores 2 y 3, es el texto de la rama que mezclamos.</p>
+
+<p>Una vez eliminados estos marcadores, debemos añadir el fichero al <em>stage</em> con el comando <strong>add</strong>. Una vez resueltos todos los conflictos, deberemos realizar el <strong>commit</strong>.</p>
+
+<h3 id="deshacer-la-mezcla-de-un-fichero-conflictivo">Deshacer la mezcla de un fichero conflictivo</h3>
+
+<p>Si no queremos resolver los conflictos, podemos extrear una versión anterior del fichero para substituir a la actual conflictiva.</p>
+
+<p>Si queremos matener la versión de la rama activa, usaremos el modificador <strong>–ours</strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git checkout --ours file
+</code></pre>
+</div>
+
+<p>Si queremos matener la versión de la rama que es mezclada, usaremos el modificador <strong>–theirs</strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git checkout --theirs file
+</code></pre>
+</div>
+
+<h2 id="repositorios-remotos">6. Repositorios remotos</h2>
+
+<p>Para inicializar un nuevo proyecto extrayendo los ficheros de un repositorio remoto, se debe usar el comando <strong>clone</strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone proyect_url
+</code></pre>
+</div>
+
+<p>Este comando no solo copia los ficheros del proyecto remoto, además configura la rama actual asosiandola con la rama remota(<em>track</em>).</p>
+
+<p>Cuando una rama local tiene asociada una o más ramas remotas, podemos compartir código con esas ramas.</p>
+
+<p>Con el comando <strong>pull</strong> podemos traernos los útimos cambios realizados en la rama remota. Con el comando <strong>push</strong> podemos enviar a la rama remota los últimos cambios realizados.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git pull origin master
+$ git push origin master
+</code></pre>
+</div>
+
+<p>Recibe dos parámetros. Primero en nombre del repositorio remoto a usar. Segundo, el nombre de la rama remota.</p>
+
+<p>Para saber que <em>remotes</em> tienes configurado una rama local usar el siguiente comando:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote show origin
+</code></pre>
+</div>
+
+<p>Para añadir un nuevo <em>remote</em> a un repositorio local se usa el comando <strong>remote add</strong>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git remote add remote_name remote_url
+</code></pre>
+</div>
+
+<p>Una vez configurado el <em>remote</em>, se puede descargar todos sus ficheros y referencias con el comando <strong>fetch</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git fetch remote_name
+</code></pre>
+</div>
+
+<p>El comando <strong>fetch</strong> es similar a realizar un <strong>pull</strong>. La diferencia reside en que el comando <strong>pull</strong> realiza un <strong>merge</strong> con los cambios locales.</p>
+
+<h3 id="crear-repositorios-en-remoto">Crear repositorios en remoto</h3>
+
+<p>Se necesitan dos cosas para crear un repositorio remoto:</p>
+
+<ol>
+  <li>Un acceso remoto</li>
+  <li>Un repositorio <em>bare</em></li>
+</ol>
+
+<h4 id="acceso-remoto">Acceso remoto</h4>
+
+<p>Se puede usar ssh, o un directorio compartido. 
+Los protocolos que admite son:</p>
+
+<ul>
+  <li>file://</li>
+  <li>ssh://</li>
+  <li>git://</li>
+  <li>http://</li>
+  <li>https://</li>
+</ul>
+
+<h4 id="respositorio-bare">Respositorio <em>bare</em></h4>
+
+<p>Un repositorio se denomina <em>bare</em> cuando no tiene un directorio de trabajo asociado. Esto hace que se pueda usar como repositorio remoto para otros repositorios de trabajo.</p>
+
+<p>Se puede crear un repositorio inicial bacío <em>bare</em> con el siguiente comando:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git init --bare
+</code></pre>
+</div>
+
+<p>También se puede crear un repositorio <em>bare</em> clonando un repositorio existente:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone --bare url_rep new_rep
+</code></pre>
+</div>
+
+<h2 id="informacin-de-los-commits">Información de los <em>commits</em></h2>
+
+<p>Para extraer información de los <em>commits</em> de la rama actual disponemos del comando <strong>log</strong>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git log
+</code></pre>
+</div>
+
+<p>Un comando muy útil para ver gráficamente todas las ramas y sus <em>merges</em>, además de ver los mensajes asociados es el siguiente:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git log --graph --decorate --pretty=oneline --abbrev-commit --all
+</code></pre>
+</div>
+
+<h2 id="sitios-web-que-permiten-el-uso-de-git">Sitios web que permiten el uso de git</h2>
+
+<p>Websites that host Git</p>
+
+<ul>
+  <li><a href="https://github.com/">GitHub</a></li>
+  <li><a href="https://www.assembla.com/home">Assembla</a></li>
+  <li><a href="http://beanstalkapp.com/">Beanstalk</a></li>
+  <li><a href="https://bitbucket.org/">Bitcucket</a></li>
+  <li><a href="http://www.codebasehq.com/">codebase</a></li>
+  <li><a href="https://unfuddle.com/">Unfuddle</a></li>
+</ul>
+
+<h2 id="como-instalar-git">Como instalar git</h2>
+
+<p><a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">Instalar git en Linux, Mac y Windows</a></p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="http://git-scm.com">Git official site</a></li>
+  <li><a href="http://git-scm.com/book">Git book</a></li>
+  <li><a href="http://git-scm.com/docs">Git reference</a></li>
+</ul>
+
+<h2 id="gui">GUI</h2>
+
+<ul>
+  <li><a href="http://www.sourcetreeapp.com">Sourcetree</a></li>
+  <li><a href="http://mac.github.com">Github for Mac</a></li>
+</ul>
+
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2013/07/15/cambio-orientacion-ios6/" data-toggle="tooltip" data-placement="top" title="Cambio de orientación en iOS 6">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2014/02/07/grabacion-audio-ios7/" data-toggle="tooltip" data-placement="top" title="iOS 7 Grabación de Audio">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/madcato">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Veladan Programming Blog 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+</html>

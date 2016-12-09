@@ -28,6 +28,7 @@
 		0BCC186E17998AE100A5393D /* OSLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC186D17998AE100A5393D /* OSLoadingViewController.m */; };
 		0BCC18711799D94C00A5393D /* OSNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCC18701799D94C00A5393D /* OSNetwork.m */; };
 		0BCC18731799DACA00A5393D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCC18721799DACA00A5393D /* SystemConfiguration.framework */; };
+		0BE672891DFB2622005F6C38 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0BE672881DFB2622005F6C38 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0BCC186F1799D94C00A5393D /* OSNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSNetwork.h; sourceTree = "<group>"; };
 		0BCC18701799D94C00A5393D /* OSNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSNetwork.m; sourceTree = "<group>"; };
 		0BCC18721799DACA00A5393D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0BE672881DFB2622005F6C38 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		0B8726A6179956C1008EA159 /* webapprss */ = {
 			isa = PBXGroup;
 			children = (
+				0BE672881DFB2622005F6C38 /* www */,
 				0B2385A517995814007DD866 /* web */,
 				0B8726AF179956C1008EA159 /* AppDelegate.h */,
 				0B8726B0179956C1008EA159 /* AppDelegate.m */,
@@ -239,6 +242,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = veladan;
 				TargetAttributes = {
+					0B87269C179956C1008EA159 = {
+						DevelopmentTeam = TW65EXAM4U;
+					};
 					0B8726C0179956C1008EA159 = {
 						TestTargetID = 0B87269C179956C1008EA159;
 					};
@@ -268,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE672891DFB2622005F6C38 /* www in Resources */,
 				0B8726BC179956C1008EA159 /* Images.xcassets in Resources */,
 				0B8726AB179956C1008EA159 /* InfoPlist.strings in Resources */,
 				0B8726B4179956C1008EA159 /* Main.storyboard in Resources */,
@@ -421,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = TW65EXAM4U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "webapprss/webapprss-Prefix.pch";
 				INFOPLIST_FILE = "webapprss/webapprss-Info.plist";
@@ -436,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = TW65EXAM4U;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "webapprss/webapprss-Prefix.pch";
 				INFOPLIST_FILE = "webapprss/webapprss-Info.plist";

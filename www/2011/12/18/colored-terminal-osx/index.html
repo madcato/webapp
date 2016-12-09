@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Veladan programming blog for all the programming issues I found.">
+
+    <title>Colored Terminal for Mac OS X [improved] - Veladan Programming Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/2011/12/18/colored-terminal-osx/">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/application.css" media="all" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Veladan Programming Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="/myapps/">My Apps</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-04.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Colored Terminal for Mac OS X [improved]</h1>
+                    
+                    <span class="meta">Posted by Daniel Vela on December 18, 2011</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<p><img src="http://localhost:4000/assets/tumblr_inline_mk0a74A3Xk1qz4rgp.png" alt="OS X terminal" />
+Create a text file named .bash_profile in your $HOME path with the following content:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/bin   
+<span class="nb">export </span><span class="nv">CLICOLOR</span><span class="o">=</span>1   
+<span class="nb">export </span><span class="nv">LSCOLORS</span><span class="o">=</span>ExFxCxDxBxegedabagacad   
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">'${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\u@\h\[\033[1;31m\]:\[\033[0;36m\]\w$\[\033[0m\] '</span>  
+<span class="c">#export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;00m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '   </span>
+<span class="nb">export </span><span class="nv">PS2</span><span class="o">=</span><span class="s1">'&amp;gt;'</span>  
+<span class="c"># ~/.bashrc: executed by bash(1) for non-login shells.   </span>
+<span class="c"># see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)   </span>
+<span class="c"># for examples   </span>
+<span class="c"># If not running interactively, don't do anything   </span>
+<span class="o">[</span> -z <span class="s2">"</span><span class="nv">$PS1</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>   
+<span class="c"># don't put duplicate lines in the history. See bash(1) for more options   </span>
+<span class="c"># don't overwrite GNU Midnight Commander's setting of `ignorespace'.   </span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span><span class="nv">$HISTCONTROL</span><span class="k">${</span><span class="nv">HISTCONTROL</span><span class="p">+,</span><span class="k">}</span>ignoredups   
+<span class="c"># ... or force ignoredups and ignorespace   </span>
+<span class="nv">HISTCONTROL</span><span class="o">=</span>ignoreboth   
+<span class="c"># append to the history file, don't overwrite it   </span>
+<span class="nb">shopt</span> -s histappend   
+<span class="c"># for setting history length see HISTSIZE and HISTFILESIZE in bash(1)   </span>
+<span class="c"># check the window size after each command and, if necessary,   </span>
+<span class="c"># update the values of LINES and COLUMNS.   </span>
+<span class="nb">shopt</span> -s checkwinsize   
+<span class="c"># make less more friendly for non-text input files, see lesspipe(1)   </span>
+<span class="o">[</span> -x /usr/bin/lesspipe <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span><span class="nv">SHELL</span><span class="o">=</span>/bin/sh lesspipe<span class="k">)</span><span class="s2">"</span>   
+<span class="c"># set variable identifying the chroot you work in (used in the prompt below)   </span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">"</span><span class="nv">$debian_chroot</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -r /etc/debian_chroot <span class="o">]</span>; <span class="k">then   
+</span><span class="nv">debian_chroot</span><span class="o">=</span><span class="k">$(</span>cat /etc/debian_chroot<span class="k">)</span>   
+<span class="k">fi</span>   
+<span class="c"># set a fancy prompt (non-color, unless we know we "want" color)   </span>
+<span class="k">case</span> <span class="s2">"</span><span class="nv">$TERM</span><span class="s2">"</span> <span class="k">in   
+</span>xterm-color<span class="p">)</span> <span class="nv">color_prompt</span><span class="o">=</span>yes;;   
+<span class="k">esac</span>   
+<span class="c"># uncomment for a colored prompt, if the terminal has the capability; turned   </span>
+<span class="c"># off by default to not distract the user: the focus in a terminal window   </span>
+<span class="c"># should be on the output of commands, not on the prompt   </span>
+<span class="c">#force_color_prompt=yes   </span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">"</span><span class="nv">$force_color_prompt</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then   
+if</span> <span class="o">[</span> -x /usr/bin/tput <span class="o">]</span> <span class="o">&amp;&amp;</span> tput setaf 1 &gt;&amp;/dev/null; <span class="k">then</span>   
+<span class="c"># We have color support; assume it's compliant with Ecma-48   </span>
+<span class="c"># (ISO/IEC-6429). (Lack of such support is extremely rare, and such   </span>
+<span class="c"># a case would tend to support setf rather than setaf.)   </span>
+<span class="nv">color_prompt</span><span class="o">=</span>yes   
+<span class="k">else   
+</span><span class="nv">color_prompt</span><span class="o">=</span>   
+<span class="k">fi   
+fi   
+</span><span class="nb">unset </span>color_prompt force_color_prompt   
+<span class="c"># If this is an xterm set the title to user@host:dir   </span>
+<span class="k">case</span> <span class="s2">"</span><span class="nv">$TERM</span><span class="s2">"</span> <span class="k">in   
+</span>xterm<span class="k">*</span><span class="p">|</span>rxvt<span class="k">*</span><span class="p">)</span>   
+<span class="p">;;</span>   
+<span class="k">*</span><span class="p">)</span>   
+<span class="p">;;</span>   
+<span class="k">esac</span>   
+<span class="c"># enable color support of ls and also add handy aliases   </span>
+<span class="k">if</span> <span class="o">[</span> -x /usr/bin/dircolors <span class="o">]</span>; <span class="k">then   
+</span><span class="nb">test</span> -r ~/.dircolors <span class="o">&amp;&amp;</span> <span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>dircolors -b ~/.dircolors<span class="k">)</span><span class="s2">"</span> <span class="o">||</span> <span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>dircolors -b<span class="k">)</span><span class="s2">"</span>   
+<span class="nb">alias </span><span class="nv">ls</span><span class="o">=</span><span class="s1">'ls --color=auto'</span>   
+<span class="c">#alias dir='dir --color=auto'   </span>
+<span class="c">#alias vdir='vdir --color=auto'   </span>
+<span class="nb">alias </span><span class="nv">grep</span><span class="o">=</span><span class="s1">'grep --color=auto'</span>   
+<span class="nb">alias </span><span class="nv">fgrep</span><span class="o">=</span><span class="s1">'fgrep --color=auto'</span>   
+<span class="nb">alias </span><span class="nv">egrep</span><span class="o">=</span><span class="s1">'egrep --color=auto'</span>   
+<span class="k">fi</span>   
+<span class="c"># some more ls aliases   </span>
+<span class="c">#alias ll='ls -l'   </span>
+<span class="c">#alias la='ls -A'   </span>
+<span class="c">#alias l='ls -CF'   </span>
+<span class="c"># Alias definitions.   </span>
+<span class="c"># You may want to put all your additions into a separate file like   </span>
+<span class="c"># ~/.bash_aliases, instead of adding them here directly.   </span>
+<span class="c"># See /usr/share/doc/bash-doc/examples in the bash-doc package.   </span>
+<span class="k">if</span> <span class="o">[</span> -f ~/.bash_aliases <span class="o">]</span>; <span class="k">then</span>   
+. ~/.bash_aliases   
+<span class="k">fi</span>   
+<span class="c"># enable programmable completion features (you don't need to enable   </span>
+<span class="c"># this, if it's already enabled in /etc/bash.bashrc and /etc/profile   </span>
+<span class="c"># sources /etc/bash.bashrc).   </span>
+<span class="k">if</span> <span class="o">[</span> -f /etc/bash_completion <span class="o">]</span> <span class="o">&amp;&amp;</span> ! <span class="nb">shopt</span> -oq posix; <span class="k">then</span>   
+. /etc/bash_completion   
+<span class="k">fi</span></code></pre></figure>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2011/12/13/business-models/" data-toggle="tooltip" data-placement="top" title="Business Models">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2012/01/01/appearance-uikit/" data-toggle="tooltip" data-placement="top" title="Appearance of UIKit">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/veladan">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/madcato">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Veladan Programming Blog 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+</html>

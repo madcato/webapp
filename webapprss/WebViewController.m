@@ -30,6 +30,30 @@
     [web loadRequest:request];
 }
 
+- (void)setLocalPath:(NSString*)localPath {
+
+    // let url = bundle.URLForResource("index", withExtension: "html", subdirectory: "htmlFileFolder")
+    // let html = try String(contentsOfURL: url)
+    // let base = url.URLByDeletingLastPathComponent
+    // webView.loadHTMLString(html, baseURL: base)
+
+
+  //  NSURL* path = [[NSBundle mainBundle]
+    //                  URLForResource:@"index" withExtension:@"html" subdirectory:localPath];
+    //NSString* html = [NSString stringWithContentsOfURL:path usedEncoding:nil error:nil];
+    //NSURL* base = [path URLByDeletingLastPathComponent];
+
+    //[web loadHTMLString:html baseURL:base];
+
+    //NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"_site/index" ofType:@"html"];
+    //NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    //[web loadHTMLString:htmlString baseURL: [[NSBundle mainBundle] bundleURL]];
+
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:localPath]];
+
+    [web loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
 - (void)viewDidLoad {
 	UIBarButtonItem* moreButton = [[UIBarButtonItem alloc]
                         initWithBarButtonSystemItem:UIBarButtonSystemItemAction

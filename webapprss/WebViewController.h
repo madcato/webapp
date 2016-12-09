@@ -18,6 +18,8 @@
 	NSString* url;
 }
 
+- (void)setLocalPath:(NSString*)localPath;
+
 /*! 
  @property web
  @abstract web outlet in WebViewController.xib
