@@ -21,6 +21,18 @@ Web App - iOS project template
 	
 Following this steps you can add as many view controllers as you need.
 
+### Alternative method: include the web site into the app
+
+**IMPORTANT**: To make this method works the urls inside the web site must be relative to the index.html location, not the base path of a domain: here there is no base domain. Use links link ```<a href="img/image.jpg">``` an not ```<a href="/img/image.jpg">```.
+
+To create a web site inside the app follow this steps:
+
+1. Import web directory into Xcode project. Mark teh option create links as references.
+2. Instead of indicate the url (step 8). Call the following code with the name of the base directory previously imported:      
+
+        [self.webController setLocalPath:@"www"];
+    Change "www" with your directory name.
+
 ## Changing the root view controller
 
 If your app doesn't need a tab bar, you can create any other type of app. Create a new controller of any type and assign it as "Initial Scene", marking the corresponding checkbox in the "Attributes inspector".

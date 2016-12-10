@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.webController setLocalPath:@"_site"];
+    [self.webController setLocalPath:@"www"];
 }
 
 - (void)didReceiveMemoryWarning {
